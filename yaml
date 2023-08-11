@@ -1,0 +1,7 @@
+FROM anapsix/alpine-java
+WORKDIR /home/
+COPY spring-petclinic /home/
+
+RUN ./mvnw spring-boot:run
+RUN java -jar target/*.jar
+
